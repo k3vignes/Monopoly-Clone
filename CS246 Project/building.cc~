@@ -1,0 +1,25 @@
+#include "building.h"
+#include "ownable.h"
+using namespace std; 
+
+Building::Building(int purchCost, int improveCost, int t[], string monopolyBlock, string name){
+	this->purchCost = purchCost;
+	this->improveCost = improveCost;
+	cout << "bulding: here" << endl; 
+	for (int i = 0; i < 6; i++){ 
+		this->tuition[i] = t[i]; 
+	}
+	cout << "this tutition: " << this->tuition[0] << " tutuion: " << t[0] << endl;  
+	this->monopolyBlock = monopolyBlock;
+	this->buildingSize = 0;
+	this->name = name;
+	this->isOwnable = true;
+	this->owner = -1;  
+}
+
+
+
+int Building::rent(){
+	cout << "building Size: " << this->buildingSize << " rent: " << this->tuition[0] << endl;  
+	return this->tuition[this->buildingSize]; 
+}

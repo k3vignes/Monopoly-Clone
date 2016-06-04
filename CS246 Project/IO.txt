@@ -1,0 +1,37 @@
+-testing
+set 26
+
+
+landed on unOwned property, so buy or auction this property
+auction    
+PHYS up for auction, original value: 260
+oo's turn to raise bid, enter a bid? y/n
+y
+779
+new highest bid is: 779
+ff's turn to raise bid, enter a bid? y/n
+n
+oo's turn to raise bid, enter a bid? y/n
+n
+
+
+next
+
+
+set 27
+landed on unOwned property, so buy or auction this property
+buy
+
+
+next
+current player turn is oo
+Their location is on EV3
+set 27
+
+
+
+FINAL RESULT
+building Name: B1 monoblock: Sci1 tuition[0]: 22
+BEFORE PAYING RENT - IN BUILDING RENT - curplayer.money: 780 owner's money: 1040
+AFTER PAYING RENT - IN BUILDING RENT - curplayer.money: 758 owner's money: 1062
+

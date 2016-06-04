@@ -1,0 +1,26 @@
+#ifndef OWNABLE_H
+#define OWNABLE_H
+#include "property.h" 
+using namespace std;
+
+class Ownable: public Property{ 
+	public:
+
+	int owner;		// which player owns the property, -1, if none
+	int purchCost; 	// how much to buy the property
+	int improveCost; 	// how much for the next improvement
+	int tuition[];	// amount of tuition for current level of buildingsize
+	int buildingSize;	// the current size of the building on the property
+	bool mortgaged; 	// whether or not the property is mortgaged
+	string monopolyBlock; // which block does it belong to, eg; Math or Arts
+	
+	//Ownable(); 
+	//virtual ~Ownable(); 	// destructor
+	virtual void setOwnership(int player); // sets the ownership of property to given player
+	//virtual void improve(); // improves the property to the next improvement level
+	//virtual bool checkMortgaged();	// checks if property is mortgaged 
+	virtual int rent();	// how much rent is owed when someone lands on property
+
+};
+
+#endif 

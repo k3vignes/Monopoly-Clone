@@ -1,0 +1,50 @@
+#include "needleshall.h"
+using namespace std;
+
+NeedlesHall::NeedlesHall(string name){
+	this->name = name;
+	this->isOwnable = false;
+	prng = PRNG(9);
+}
+
+void NeedlesHall::specialty(Player *p){
+  int n;
+  if(p->availTimsCard()){
+    n = prng(1,100);
+    if(n == 1){
+	    cout << "won roll up rim" << endl;
+	    p->rollUpRim[p->id] += 1;
+	    return;
+	  }
+  }
+
+  n = prng(1,36);
+  if(n<=2){
+    cout << "NeedlesHall -200" << endl;
+    p->pay(200,NULL);
+  }
+  else if(n<=6){
+    cout << "NeedlesHall -100" << endl;
+    p->pay(100,NULL);
+  }
+  else if(n<=12){
+    cout << "NeedlesHall -50" << endl;
+    p->pay(50,NULL);
+  }
+  else if(n<=24){
+    cout << "NeedlesHall 25" << endl;
+    p->money += 25;
+  }
+  else if(n<=30){
+    cout << "NeedlesHall +50" << endl;
+    p->money += 50;
+  }
+  else if(n<=34){
+    cout << "NeedlesHall +100" << endl;
+    p->money += 100;
+  }
+  else{
+    cout << "NeedlesHall +200" << endl;
+    p->money += 200;
+  }
+}

@@ -1,0 +1,7 @@
+bonus.txt
+
+Some Error Checking was done, for some invalid inputs - compile and run as normal
+
+Effective use of COUT, to tell players what's happening - compile and run as normal
+
+When a property is owned, the view will display the owner's symbol at the top of that property - compile and run as normal
